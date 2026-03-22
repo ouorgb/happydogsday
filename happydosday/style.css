@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'SweetCandy';
+  src: url('font.ttf') format('truetype');
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+  background-image: url('bg1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: 'SweetCandy', sans-serif;
+  letter-spacing: 1px;
+}
+
+
+
+.title-container img {
+  width: 250px !important; /* 👈 max-width를 지우고, 무조건 250px로 고정해버립니다! */
+  height: auto !important;
+  margin-bottom: 10px;
+}
+
+.button-group {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  box-shadow: none;
+  cursor: pointer;
+  transition: transform 0.1s;
+}
+
+/* 🐶🐾🦴 [버튼 사이즈 조절 및 통일] 세 버튼 이미지를 하나의 작은 크기로 고정 */
+button img {
+  width: 135px; 
+  height: auto; 
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+#btn-retake { display: none; }
+#btn-save { display: none; }
+
+#canvas-container canvas {
+  width: 100% !important;
+  height: auto !important;
+  max-width: 95vw;
+  border: 1px solid #504231;
+}

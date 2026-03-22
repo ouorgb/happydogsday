@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <title>강아지들아 행복해야대,,</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+  </head>
+  <body>
+    <div class="title-container">
+      <img src="title.png" alt="With my small friends,,">
+    </div>
+    
+    <div id="canvas-container"></div>
+    
+    <div class="button-group">
+      <button id="btn-capture" onclick="takePhoto()">
+        <img src="boop_btn.png" alt="BOOP!">
+      </button>
+      <button id="btn-retake" onclick="retakePhoto()">
+        <img src="oops_btn.png" alt="OOPS!">
+      </button>
+      <button id="btn-save" onclick="savePhoto()">
+        <img src="fetch_btn.png" alt="FETCH!">
+      </button>
+    </div>
+    
+    <script src="sketch.js"></script>
+  </body>
+</html>
