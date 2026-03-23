@@ -15,7 +15,7 @@ function setup() {
   video.size(CANVAS_WIDTH, CANVAS_HEIGHT);
   video.hide();
 
-  loadImage('frame.png', function(img) { frameImg = img; });
+  loadImage('frame2.png', function(img) { frameImg = img; });
   loadImage('bg1.jpg', function(img) { bgImg = img; });
 }
 
