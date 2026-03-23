@@ -19,7 +19,7 @@ body {
 
 
 .title-container img {
-  width: 250px !important; /* 👈 max-width를 지우고, 무조건 250px로 고정해버립니다! */
+  width: 250px !important; 
   height: auto !important;
   margin-bottom: 10px;
 }
@@ -39,7 +39,7 @@ button {
   transition: transform 0.1s;
 }
 
-/* 🐶🐾🦴 [버튼 사이즈 조절 및 통일] 세 버튼 이미지를 하나의 작은 크기로 고정 */
+
 button img {
   width: 150px; 
   height: auto; 
@@ -55,6 +55,6 @@ button:active {
 #canvas-container canvas {
   width: 100% !important;
   height: auto !important;
-  max-width: 500px;
+  max-width: 400px;
   border: 1px solid #504231;
 }
