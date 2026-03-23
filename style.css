@@ -55,6 +55,6 @@ button:active {
 #canvas-container canvas {
   width: 100% !important;
   height: auto !important;
-  max-width: 95vw;
+  max-width: 500px;
   border: 1px solid #504231;
 }
