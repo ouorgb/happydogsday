@@ -12,11 +12,36 @@ function setup() {
 
   let constraints = { video: { facingMode: "user" }, audio: false };
   video = createCapture(constraints);
-  video.size(CANVAS_WIDTH, CANVAS_HEIGHT);
   video.hide();
 
-  loadImage('frame2.png', function(img) { frameImg = img; });
+  loadImage('frame.png', function(img) { frameImg = img; }); 
   loadImage('bg1.jpg', function(img) { bgImg = img; });
+}
+
+function drawCameraCover(img) {
+  if (img.width === 0 || img.height === 0) return;
+
+  let vRatio = img.width / img.height;
+  let cRatio = CANVAS_WIDTH / CANVAS_HEIGHT;
+  let dW, dH, dX, dY;
+
+  if (vRatio > cRatio) {
+    dH = CANVAS_HEIGHT;
+    dW = dH * vRatio;
+    dX = (CANVAS_WIDTH - dW) / 2;
+    dY = 0;
+  } else {
+    dW = CANVAS_WIDTH;
+    dH = dW / vRatio;
+    dX = 0;
+    dY = (CANVAS_HEIGHT - dH) / 2;
+  }
+
+  push();
+  translate(CANVAS_WIDTH, 0);
+  scale(-1, 1);
+  image(img, dX, dY, dW, dH);
+  pop();
 }
 
 function draw() {
@@ -26,20 +51,12 @@ function draw() {
     background('#f9f9f9');
   }
 
-  drawingContext.filter = 'brightness(105%) contrast(50%) saturate(90%) blur(1px)';
+  drawingContext.filter = 'brightness(150%) contrast(90%) saturate(180%) blur(0.8px)';
 
   if (capturedImg !== null) {
-    push(); 
-    translate(CANVAS_WIDTH, 0); 
-    scale(-1, 1); 
-    image(capturedImg, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    pop(); 
+    drawCameraCover(capturedImg);
   } else if (video && video.elt && video.elt.readyState >= 2) { 
-    push();
-    translate(CANVAS_WIDTH, 0);
-    scale(-1, 1);
-    image(video, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
-    pop();
+    drawCameraCover(video);
   } else {
     drawingContext.filter = 'none';
     fill('#504231'); noStroke(); textSize(30); textAlign(CENTER, CENTER);
