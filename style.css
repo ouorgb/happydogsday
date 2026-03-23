@@ -52,9 +52,15 @@ button:active {
 #btn-retake { display: none; }
 #btn-save { display: none; }
 
+
+#canvas-container {
+  width: 100%;
+  max-width: 400px; 
+  margin: 0 auto;
+}
+
 #canvas-container canvas {
   width: 100% !important;
   height: auto !important;
-  max-width: 400px;
   border: 1px solid #504231;
 }
