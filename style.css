@@ -64,3 +64,14 @@ button:active {
   height: auto !important;
   border: none;
 }
+
+#canvas-container {
+  width: 95%; 
+  max-width: 800px; 
+  margin: 0 auto; 
+}
+
+#canvas-container canvas {
+  width: 100% !important;
+  height: auto !important;
+}
