@@ -12,6 +12,7 @@ function setup() {
 
   let constraints = { video: { facingMode: "user" }, audio: false };
   video = createCapture(constraints);
+  video.elt.setAttribute('playsinline', '');
   video.hide();
 
   loadImage('frame2.png', function(img) { frameImg = img; }); 
