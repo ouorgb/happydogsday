@@ -26,7 +26,7 @@ function draw() {
     background('#f9f9f9');
   }
 
-  drawingContext.filter = 'brightness(105%) contrast(50%) saturate(180%) blur(0.8px)';
+  drawingContext.filter = 'brightness(105%) contrast(50%) saturate(90%) blur(1px)';
 
   if (capturedImg !== null) {
     push(); 
