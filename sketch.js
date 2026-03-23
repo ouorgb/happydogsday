@@ -52,7 +52,7 @@ function draw() {
     background('#f9f9f9');
   }
 
-  drawingContext.filter = 'brightness(150%) contrast(90%) saturate(180%) blur(0.8px)';
+  drawingContext.filter = 'brightness(100%) contrast(40%) saturate(80%) blur(1.5px)';
 
   if (capturedImg !== null) {
     drawCameraCover(capturedImg);
