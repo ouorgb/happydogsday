@@ -69,7 +69,7 @@ function draw() {
   if (frameImg) {
     image(frameImg, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   } else {
-    noFill(); nostroke();
+    noFill(); noStroke();
     rect(5, 5, CANVAS_WIDTH - 10, CANVAS_HEIGHT - 10);
   }
 }
