@@ -41,7 +41,7 @@ button {
 
 /* 🐶🐾🦴 [버튼 사이즈 조절 및 통일] 세 버튼 이미지를 하나의 작은 크기로 고정 */
 button img {
-  width: 135px; 
+  width: 150px; 
   height: auto; 
 }
 
