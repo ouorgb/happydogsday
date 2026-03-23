@@ -15,7 +15,7 @@ function setup() {
   video.elt.setAttribute('playsinline', '');
   video.hide();
 
-  loadImage('frame2.png', function(img) { frameImg = img; }); 
+  loadImage('frame_new.png', function(img) { frameImg = img; }); 
   loadImage('bg1.jpg', function(img) { bgImg = img; });
 }
 
