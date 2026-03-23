@@ -14,7 +14,7 @@ function setup() {
   video = createCapture(constraints);
   video.hide();
 
-  loadImage('frame.png', function(img) { frameImg = img; }); 
+  loadImage('frame2.png', function(img) { frameImg = img; }); 
   loadImage('bg1.jpg', function(img) { bgImg = img; });
 }
 
@@ -68,7 +68,7 @@ function draw() {
   if (frameImg) {
     image(frameImg, 0, 0, CANVAS_WIDTH, CANVAS_HEIGHT);
   } else {
-    noFill(); stroke('#504231'); strokeWeight(5);
+    noFill(); nostroke();
     rect(5, 5, CANVAS_WIDTH - 10, CANVAS_HEIGHT - 10);
   }
 }
